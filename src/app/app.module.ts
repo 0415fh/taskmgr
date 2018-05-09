@@ -5,8 +5,11 @@ import { HttpModule } from '@angular/http';
 import { MdIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 import { CoreModule } from './core/core.module';
+import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { loadSvgResources } from './utils/svg-utils';
+import { AppRoutingModule } from './app-routing.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +18,9 @@ import { loadSvgResources } from './utils/svg-utils';
     BrowserModule,
     CoreModule,
     MdSidenavModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

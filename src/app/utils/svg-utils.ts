@@ -6,11 +6,13 @@ export const loadSvgResources = (ir: MdIconRegistry, ds: DomSanitizer) => {
     const svgUrl = 'assets/svgIcon/';
     const sidebarIcon = `${imgUrl}sidebar/`;
     const daydir = `${imgUrl}/days/`;
+    const avatarDir = `${imgUrl}avatar/`;
     const days = [
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
         11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
         21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
     ];
+    ir.addSvgIconSetInNamespace('avatars', ds.bypassSecurityTrustResourceUrl(`${avatarDir}avatars.svg`));
     ir.addSvgIcon('category', ds.bypassSecurityTrustResourceUrl(`${svgUrl}category.svg`));
     ir.addSvgIcon('month', ds.bypassSecurityTrustResourceUrl(`${sidebarIcon}month.svg`));
     ir.addSvgIcon('project', ds.bypassSecurityTrustResourceUrl(`${sidebarIcon}project.svg`));

@@ -1,9 +1,9 @@
-@import '~@angular/material/theming';
-@include mat-core();
-$my-app-primary: mat-palette($mat-indigo);
-$my-app-accent: mat-palett($mat-pink, A200, A100, A400);
-$my-app-warn: mat-palett($mat-red, A200, A100, A400);
+// @import '~@angular/material/theming';
+// @include mat-core();
+// $my-app-primary: mat-palette($mat-indigo);
+// $my-app-accent: mat-palett($mat-pink, A200, A100, A400);
+// $my-app-warn: mat-palett($mat-red, A200, A100, A400);
 
-$my-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+// $my-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 
-@include angular-material-theme($my-theme)
+// @include angular-material-theme($my-theme)

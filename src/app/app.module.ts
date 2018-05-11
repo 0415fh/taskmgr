@@ -9,18 +9,21 @@ import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { loadSvgResources } from './utils/svg-utils';
 import { AppRoutingModule } from './app-routing.module';
-
+import { ProjectModule } from './project/project.module';
+import { TaskModule } from './task/task.module';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    CoreModule,
     MdSidenavModule,
     HttpModule,
     AppRoutingModule,
-    LoginModule
+    LoginModule,
+    ProjectModule,
+    CoreModule,
+    TaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]

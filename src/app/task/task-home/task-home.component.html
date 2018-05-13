@@ -1,8 +1,8 @@
 <div class="task-lists">
   <app-task-list class="list-container" *ngFor="let list of lists">
-    <app-task-header></app-task-header>
-    <app-task-item *ngFor="let task of list.tasks">
-
+    <app-task-header (newTask)="launchTaskDialog()"></app-task-header>
+    <!-- {{list.task | json}} -->
+    <app-task-item *ngFor="let task of list.task" [item]="task" [avatra]="task.owner.avatar">
     </app-task-item>
   </app-task-list>
 </div>

@@ -7,14 +7,14 @@ import { MD_DIALOG_DATA, MdDialogRef } from '@angular/material';
   styleUrls: ['./new-project.component.scss']
 })
 export class NewProjectComponent implements OnInit {
-
+  title = '';
   constructor(
     @Inject(MD_DIALOG_DATA) private data,
     private dialogRef: MdDialogRef<NewProjectComponent>
   ) { }
 
   ngOnInit() {
-    console.log(this.data.title);
+    this.title = this.data.title;
   }
   onClick() {
     this.dialogRef.close('hello Francis');

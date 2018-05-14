@@ -1,11 +1,19 @@
 <div class="task-lists">
   <app-task-list class="list-container" *ngFor="let list of lists">
-    <app-task-header (newTask)="launchTaskDialog()"></app-task-header>
+    <app-task-header 
+    (newTask)="launchTaskDialog()"
+    (moveAll)="launchCopyTaskDialog()"
+    (delList)="launchDelListDialog()"
+    (editList)="launchEditListDialog()"
+    ></app-task-header>
     <!-- {{list.task | json}} -->
-    <app-task-item *ngFor="let task of list.task" [item]="task" [avatra]="task.owner.avatar">
+    <app-task-item *ngFor="let task of list.task" [item]="task"
+     [avatra]="task.owner.avatar"
+     (taskClick)="loanchUpdateTaskDialog(task)"
+    >
     </app-task-item>
   </app-task-list>
 </div>
-<button class="fab-button" md-fab type="button" (click)="launchInviteDialog()">
+<button class="fab-button" md-fab type="button" (click)="launchNewListDialog()">
   <md-icon>add</md-icon>
 </button>

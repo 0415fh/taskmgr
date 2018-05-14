@@ -1,0 +1,12 @@
+<form>
+  <h2 md-dialog-title>{{title}}</h2>
+  <div md-dialog-content>
+    <md-input-container class="full-width">
+      <input type="text" mdInput placeholder="任务名称">
+    </md-input-container>
+  </div>
+  <div md-dialog-actions>
+    <button type="button" (click)="onClick()" md-raised-button color="primary">保存</button>
+    <button type="button" md-button md-dialog-close>取消</button>
+  </div>
+</form>

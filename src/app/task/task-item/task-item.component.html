@@ -1,9 +1,12 @@
-<md-list-item class="container" [ngClass]="{
-  'priority-normal': item.youxian===3,
-  'priority-important': item.youxian===2,
-  'priority-emergency': item.youxian===1
-}"
-(click)="onItemClick()"
+<md-list-item
+  class="container"
+  [ngClass]="{
+    'priority-normal': item.youxian===3,
+    'priority-important': item.youxian===2,
+    'priority-emergency': item.youxian===1
+  }"
+  (click)="onItemClick()"
+  [@item]="widerIn"
 >
   <md-checkbox (click)="onCheckBoxClick($event)" class="completion-status" [checked]="item.completed"></md-checkbox>
   <div class="content" [ngClass]="{completed: item.completed}">

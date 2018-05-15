@@ -1,6 +1,6 @@
  <md-sidenav-container>
    <md-sidenav #sidenav mode="over">
-     <app-sidebar>
+     <app-sidebar (navClick)="sidenav.toggle()">
 
      </app-sidebar>
    </md-sidenav>
@@ -9,11 +9,10 @@
       <app-header (toggle)="sidenav.toggle()"></app-header>
     </header>
     <main>
-      <!-- <button (click)="sidenav.toggle  ()">打开侧边栏</button> -->
       <router-outlet></router-outlet>
     </main>
     <footer>
       <app-footer></app-footer>
     </footer>
   </div>
-</md-sidenav-container> 
+</md-sidenav-container>
